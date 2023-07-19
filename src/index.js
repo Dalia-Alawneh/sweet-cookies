@@ -27,3 +27,8 @@ const getCookie = (name) => {
     }
     return null;
 }
+const removeCookie = (name) => {
+    const date = new Date(Date.now() - 1);
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = `${name}=; ${expires}; path=/`;
+};
