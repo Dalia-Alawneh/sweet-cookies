@@ -1,0 +1,38 @@
+name: Run Automated Tasks
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Build & Generate Files
+        run: |
+          npm install
+          gulp
+      - name: Commit & Push Generated Files
+        run: |
+          git config --global user.name $user_name
+          git config --global user.email $user_email
+          git add -A
+          git commit -m "Update gulp output files"
+          git push
+        env:
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
