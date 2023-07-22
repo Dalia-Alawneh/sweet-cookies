@@ -33,7 +33,7 @@ jobs:
           git config --global user.email $user_email
           git add -A
           git commit -m "Uglify JS files and update dist"
-          git push
+          git push https://github.com/Dalia-Alawneh/sweet-cookies.git HEAD:main
         env:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
