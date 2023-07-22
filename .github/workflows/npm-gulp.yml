@@ -24,16 +24,17 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Uglify JS Files
+      - name: Minify JS Files
         run: gulp minify-js
 
-      - name: Commit & Push Uglified Files
+      - name: Commit & Push Minified Files
         run: |
           git config --global user.name $user_name
           git config --global user.email $user_email
           git add -A
-          git commit -m "Uglify JS files and update dist"
-          git push https://github.com/Dalia-Alawneh/sweet-cookies.git HEAD:main
+          git commit -m "Minify JS files and update dist"
+          git push -u origin main
         env:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
