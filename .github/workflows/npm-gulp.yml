@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Uglify JS Files
-        run: gulp uglify-js
+        run: gulp minify-js
 
       - name: Commit & Push Uglified Files
         run: |
