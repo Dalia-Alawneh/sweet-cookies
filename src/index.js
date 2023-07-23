@@ -36,8 +36,3 @@ class SweetCookie {
     
 }
 
-const sweetCookie = new SweetCookie();
-sweetCookie.set('name', 'dalia', '1h');
-sweetCookie.remove('name');
-const name = sweetCookie.get('name');
-console.log(name);
