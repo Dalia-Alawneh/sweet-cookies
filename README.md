@@ -1,6 +1,6 @@
 # Sweet Cookies
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Dalia-Alawneh/sweet-cookies/main/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Dalia-Alawneh/sweet-cookies/blob/main/LICENSE)
 
 Sweet Cookies is a lightweight JavaScript library for handling cookies in the browser. It provides a simple and efficient way to set, get, and remove cookies, making it convenient for storing small pieces of information on the client-side.
 
