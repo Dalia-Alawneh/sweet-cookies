@@ -1,4 +1,12 @@
 class SweetCookie {
+    static instance = null;
+    static getInstance() {
+        if (!SweetCookie.instance) {
+            SweetCookie.instance = new SweetCookie();
+        }
+        return SweetCookie.instance;
+    }
+
     set = (name, value, expiresIn) => {
         const timeRegex = /^(\d+)([smhd])$/;
         const matches = expiresIn.match(timeRegex);
@@ -13,6 +21,7 @@ class SweetCookie {
         const expires = "expires=" + date.toUTCString();
         document.cookie = `${name}=${value}; ${expires}; path=/`;
     };
+
     get = (name) => {
         const cookieName = `${name}=`;
         const decodedCookie = decodeURIComponent(document.cookie);
@@ -28,6 +37,7 @@ class SweetCookie {
         }
         return null;
     }
+
     remove = (name) => {
         const date = new Date(Date.now() - 1);
         const expires = "expires=" + date.toUTCString();
