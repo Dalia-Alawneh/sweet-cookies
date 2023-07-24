@@ -46,3 +46,4 @@ class SweetCookie {
     
 }
 
+const sweetCookie = new SweetCookie()
