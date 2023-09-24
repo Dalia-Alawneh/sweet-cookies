@@ -37,13 +37,7 @@ Sweet Cookies is a lightweight JavaScript library for handling cookies in the br
 
 ## Installation
 
-You can install Sweet Cookies via npm:
-
-```bash
-npm install sweet-cookies
-```
-
-Or include the script directly in your HTML:
+Include the script directly in your HTML:
 
 ```html
 <script src="path/to/sweet-cookies.js"></script>
