@@ -20,6 +20,11 @@ Include the script directly in your HTML:
 <script src="path/to/sweet-cookies.js"></script>
 ```
 
+Instead of downloading it you can use this script
+```html
+<script src="https://dalia-alawneh.github.io/sweet-cookies/dist/index.js"></script>
+```
+
 ## Usage
 
 To use Sweet Cookies, include it in your project and access its methods via the `SweetCookie` object.
